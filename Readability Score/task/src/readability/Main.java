@@ -132,6 +132,14 @@ public class Main {
                 fleschKincaidReadabilityShow(fleschKincaidReadability, fleschKincaidReadabilityAge);
                 GobbledygookShow(Gobbledygook, GobbledygookAge);
                 colemanLiauIndexShow(colemanLiauIndex, colemanLiauIndexAge);
+                String[] automatedReadabilityIndexAgeS = automatedReadabilityIndexAge.split("-");
+                String[] fleschKincaidReadabilityAgeS = fleschKincaidReadabilityAge.split("-");
+                String[] GobbledygookAgeS = GobbledygookAge.split("-");
+                String[] colemanLiauIndexAgeS = colemanLiauIndexAge.split("-");
+
+                // here is the average result from the return of the methods used
+                double average = (Double.parseDouble(automatedReadabilityIndexAgeS[1]) + Double.parseDouble(fleschKincaidReadabilityAgeS[1]) + Double.parseDouble(GobbledygookAgeS[1]) + Double.parseDouble(colemanLiauIndexAgeS[1])) / 4.0;
+                System.out.printf("Average : %.2f", average);
                 break;
             case "ari" :
                 automatedReadabilityIndexShow(automatedReadabilityIndex, automatedReadabilityIndexAge);
